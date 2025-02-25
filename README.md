@@ -1,3 +1,14 @@
+# Nyamuchi
+
+基于 Go Fiber 的轻量级博客项目
+
+## 功能特性
+- 响应式布局与暗黑模式支持
+- Tailwind CSS 样式框架
+- 模块化路由配置
+- 静态资源中间件
+- HTML 模板引擎
+
 ```tree
 ├── middleware
 │   └── static.go
