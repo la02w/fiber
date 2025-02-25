@@ -4,25 +4,26 @@
         <div class="grid md:grid-cols-3 gap-8">
             <div>
                 <h3 class="text-white font-semibold mb-4">关于本站</h3>
-                <p class="text-sm">分享Web开发经验与技术见解，记录学习成长之路。</p>
+                <p class="text-sm">{{GetBaseData "aboutsite"}}</p>
             </div>
             <div>
                 <h3 class="text-white font-semibold mb-4">联系方式</h3>
                 <ul class="space-y-2 text-sm">
-                    <li>📧 i@nyamuchi.com</li>
+                    <li>📧 {{GetBaseData "email"}}</li>
                 </ul>
             </div>
             <div>
                 <h3 class="text-white font-semibold mb-4">社交媒体</h3>
-                <div class="flex space-x-4">
-                    <a href="#" class="hover:text-indigo-400 transition">GitHub</a>
-                    <a href="#" class="hover:text-indigo-400 transition">Twitter</a>
-                    <a href="#" class="hover:text-indigo-400 transition">LinkedIn</a>
+                <div class="flex space-x-4 items-center">
+                    {{range GetBaseData "social"}}
+                    <i class="{{.icon}} mr-2"></i>
+                    <a href={{.link}} class="hover:text-indigo-400 transition">{{.name}}</a>
+                    {{end}}
                 </div>
             </div>
         </div>
         <div class="border-t border-gray-700 mt-4 pt-4 text-center text-sm">
-            <p>© 2023 DevLog. All rights reserved.</p>
+            <p>© 2025 DevLog. All rights reserved.</p>
         </div>
     </div>
 </footer>

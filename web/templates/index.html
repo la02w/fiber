@@ -1,10 +1,10 @@
 <!-- 个人简介 -->
 <section class="mb-16 text-center">
-    <img src="https://avatars.githubusercontent.com/u/12345?v=4&s=200" alt="头像"
+    <img src={{GetBaseData "img" }} alt="头像"
         class="w-32 h-32 rounded-full mx-auto mb-6 ring-4 ring-indigo-100 dark:ring-gray-700">
-    <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">前端开发者</h1>
+    <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">{{GetBaseData "username"}}</h1>
     <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-        专注于Web开发技术分享，记录学习历程。技术栈包括React、Node.js、Tailwind CSS等。
+        {{GetBaseData "motto"}}
     </p>
 </section>
 <!-- 最新文章 -->
