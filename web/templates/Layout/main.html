@@ -8,10 +8,22 @@
     <link rel="stylesheet" href="/static/style/main.css">
 </head>
 
-<body>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+
     {{template "partials/header" .}}
-    {{embed}}
+
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        {{embed}}
+    </main>
+
     {{template "partials/footer" .}}
+
+    <!-- 暗黑模式切换脚本 -->
+    <script>
+        document.getElementById('changeTheme').addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark')
+        })
+    </script>
 </body>
 
 </html>
