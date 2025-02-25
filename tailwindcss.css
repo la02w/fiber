@@ -3,3 +3,14 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 /* npx @tailwindcss/cli -i ./input.css -o ./web/static/style/main.css --watch */
+@layer base {
+    .myscrollbar::-webkit-scrollbar {
+      width: 16px;
+    }
+  
+    .myscrollbar::-webkit-scrollbar-thumb {
+      @apply rounded-full bg-black/50;
+      border: 6px solid transparent;
+      background-clip: padding-box;
+    }
+}
